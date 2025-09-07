@@ -231,7 +231,7 @@ const AddUnitTopics = () => {
         <div className="createtopicContainer">
           <div className="topicButtonText">
             <label htmlFor="my-input" className="topicTitleText">
-              Enter Topic or Multiple topic With Comma
+              Step1. Enter Topic or Multiple topic With Comma
             </label>
             <div className="right">
               <button type="submit" className="addTopic" onClick={onAddTopic}>
@@ -286,9 +286,9 @@ const AddUnitTopics = () => {
         <div className="populateContainer">
           <label
             htmlFor="my-input-u pload"
-            style={{ fontWeight: "bold", margin: "10px" }}
+           className="uploadQuestionTitle"
           >
-            Upload Your Question(BPT)
+            Step 2: Upload Your Question(BPT)
           </label>
           <input
             type="file"

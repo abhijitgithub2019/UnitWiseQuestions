@@ -159,8 +159,9 @@
 }
 
 .topicTitleText {
-    font-size: 25px;
+    font-size: 20px;
     padding: 8px;
+    font-weight: bold;
 }
 
 .unitFileUpload {
@@ -172,9 +173,9 @@
 }
 
 .uploadQuestion {
-     font-size: 20px;
-     margin-top: 1vh;
-     margin-left: 2vw;
+    font-size: 20px;
+    margin-top: 1vh;
+    margin-left: 2vw;
 }
 
 .overlay {
@@ -187,19 +188,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal {
+}
+
+.modal {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     min-width: 250px;
     text-align: center;
-  }
+}
 
-  .unitTopic {
+.unitTopic {
     margin-top: 2vh;
-  }
+}
+
+.uploadQuestionTitle {
+    font-weight: bold;
+    margin: 10px;
+}
 
 /* @media (max-width: 1024px) {
     .heading {
@@ -253,7 +259,7 @@
     .addTopic,
     .clearTopic {
         width: 100%;
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .populateButton {
@@ -293,5 +299,9 @@
 
     .clearImage {
         margin-left: 2vw;
+    }
+
+    .uploadQuestionTitle {
+        font-size: 17px;
     }
 }
