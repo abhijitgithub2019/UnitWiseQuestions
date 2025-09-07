@@ -257,7 +257,7 @@ const AddUnitTopics = () => {
           </div>
         </div>
 
-        <div id="unitTopic">
+        <div className="unitTopic">
           <p className="glow-text">Or Upload A UnitWise Topics</p>
           <input
             type="file"

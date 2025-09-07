@@ -197,6 +197,10 @@
     text-align: center;
   }
 
+  .unitTopic {
+    margin-top: 2vh;
+  }
+
 /* @media (max-width: 1024px) {
     .heading {
       font-size: 2rem;
