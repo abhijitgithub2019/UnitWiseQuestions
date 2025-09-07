@@ -302,10 +302,10 @@ const AddUnitTopics = () => {
             className="populateButton"
             onClick={populateUnitWiseQuestion}
           >
-            Populate/Generate Unitwise Questions
+            Find/Search  Question Present in Unit
           </button>
           <button type="submit" className="clearImage" onClick={onClearImage}>
-            Clear Question
+            Clear Question List
           </button>
 
           <div></div>
