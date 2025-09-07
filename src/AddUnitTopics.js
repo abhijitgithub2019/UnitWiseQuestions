@@ -221,7 +221,7 @@ const AddUnitTopics = () => {
                 className="clearTopic"
                 onClick={onClearTopic}
               >
-                Clear Unit Topics
+                Clear List Topics
               </button>
             </div>
           </div>
