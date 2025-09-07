@@ -207,6 +207,32 @@
     margin: 10px;
 }
 
+.questionList {
+    border: 1px solid grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    padding: 4px;
+    right: 0;
+    position: relative;
+    text-align: left;
+    height: auto;
+    word-wrap: break-word;
+    white-space: normal; 
+}
+
+.topicList {
+    border: 1px solid grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    height: auto;
+    word-wrap: break-word;
+    white-space: normal; 
+    width: 400px;
+    padding: 4px;
+    right: 0;
+    position: relative;
+    text-align: left;
+}
+
 /* @media (max-width: 1024px) {
     .heading {
       font-size: 2rem;

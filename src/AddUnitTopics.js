@@ -184,16 +184,7 @@ const AddUnitTopics = () => {
     list = listOfTopics.map((l, i) => {
       return (
         <div
-          style={{
-            border: "1px solid grey",
-            boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
-            height: "30px",
-            width: "400px",
-            padding: "4px",
-            right: "0px",
-            position: "relative",
-            textAlign: "left",
-          }}
+           className="topicList"
           key={`list_${i}`}
         >
           {l}
@@ -205,19 +196,7 @@ const AddUnitTopics = () => {
   if (text.length) {
     processedText = text.map((q, i) => {
       return (
-        <div
-          style={{
-            border: "1px solid grey",
-            boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
-            height: "50px",
-            width: "900px",
-            padding: "4px",
-            right: "0px",
-            position: "relative",
-            textAlign: "left",
-          }}
-          key={i}
-        >
+        <div className="questionList" key={i}>
           {q}
         </div>
       );
@@ -284,10 +263,7 @@ const AddUnitTopics = () => {
         </div>
 
         <div className="populateContainer">
-          <label
-            htmlFor="my-input-u pload"
-           className="uploadQuestionTitle"
-          >
+          <label htmlFor="my-input-u pload" className="uploadQuestionTitle">
             Step 2: Upload Your Question(BPT)
           </label>
           <input
@@ -302,7 +278,7 @@ const AddUnitTopics = () => {
             className="populateButton"
             onClick={populateUnitWiseQuestion}
           >
-            Find/Search  Question Present in Unit
+            Find/Search Question Present in Unit
           </button>
           <button type="submit" className="clearImage" onClick={onClearImage}>
             Clear Question List
@@ -321,7 +297,7 @@ const AddUnitTopics = () => {
             onClick={() => setOverlay(false)} // close on overlay click
           >
             <div
-             className="modal"
+              className="modal"
               onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
             >
               <p style={{ fontSize: "19px" }}>
