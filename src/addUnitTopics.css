@@ -1,0 +1,293 @@
+.container {
+    background-color: #FFF7E6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.heading {
+    font-size: 2.5rem;
+    text-align: center;
+    background: linear-gradient(90deg, #ff6a00, #ee0979, #ff6a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.topicContainer {
+    width: 54vw;
+    background-color: #ffffff;
+    margin: 60px;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    left: 20%;
+}
+
+.glow-text {
+    font-size: 1.5rem;
+    display: inline;
+    font-weight: bold;
+    padding: 30px;
+    color: #6b7c61;
+    /* base text color */
+    text-align: center;
+    text-shadow: 0 0 5px #ff9800, 0 0 10px #ff9800, 0 0 20px #ff9800,
+        0 0 30px #ffb84d, 0 0 40px #ffb84d;
+    animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        text-shadow: 0 0 5px #ff9800, 0 0 10px #ff9800, 0 0 20px #ff9800,
+            0 0 30px #ffb84d, 0 0 40px #ffb84d;
+    }
+
+    to {
+        text-shadow: 0 0 10px #ffea00, 0 0 20px #ffea00, 0 0 30px #ffea00,
+            0 0 40px #ffd700, 0 0 50px #ffd700;
+    }
+}
+
+.listScroll {
+    max-height: 30vh;
+    /* or whatever max width you want */
+    overflow-y: auto;
+    /* overflow-x: auto;  */
+    white-space: nowrap;
+    /* prevent wrapping so it scrolls instead */
+    margin-top: 20px;
+    position: relative;
+    align-items: start;
+    margin-left: 10px;
+    width: 27vw;
+}
+
+.populateButton {
+    height: 40px;
+    font-size: 18px;
+    background-color: lightgreen;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.clearImage {
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;
+    font-size: 20px;
+}
+
+.questionsList {
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+    max-height: 40vh;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.populateContainer {
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.createtopicContainer {
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius: 10px;
+    height: 150px;
+    width: 50vw;
+    padding: 2px;
+    margin-left: 20px;
+}
+
+.addTopic {
+    height: 40px;
+    width: 150px;
+    font-style: oblique;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: lightpink;
+}
+
+.clearTopic {
+    height: 40px;
+    width: 170px;
+    font-style: oblique;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.topicTextBox {
+    height: 60px;
+    width: 40vw;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 22px;
+    margin: 10px;
+}
+
+.topicButtonText {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    width: 45vw;
+}
+
+.imageExample {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.topicTitleText {
+    font-size: 25px;
+    padding: 8px;
+}
+
+.unitFileUpload {
+    font-size: 20px
+}
+
+.exmaplLegend {
+    font-size: 24px;
+}
+
+.uploadQuestion {
+     font-size: 20px;
+     margin-top: 1vh;
+     margin-left: 2vw;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 250px;
+    text-align: center;
+  }
+
+/* @media (max-width: 1024px) {
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .topicContainer {
+      width: 70vw;
+      margin: 40px auto;
+      left: 0;
+    }
+  
+    .listScroll {
+      width: 40vw;
+    }
+  
+    .topicTextBox {
+      width: 60vw;
+      font-size: 20px;
+    }
+  
+    .topicButtonText {
+      width: 60vw;
+    }
+  } */
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 1.6rem;
+        padding: 10px;
+    }
+
+    .topicContainer {
+        width: 83vw;
+        margin: 20px auto;
+        left: 0;
+        padding: 15px;
+    }
+
+    .glow-text {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .listScroll {
+        width: 74vw;
+        max-height: 40vh;
+        margin-left: 0;
+    }
+
+    .addTopic,
+    .clearTopic {
+        width: 100%;
+        font-size: 11px;
+    }
+
+    .populateButton {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .topicTextBox {
+        width: 74vw;
+        font-size: 18px;
+    }
+
+    .topicButtonText {
+        /* flex-direction: column; */
+        width: 100%;
+        gap: 6px;
+        width: 80vw;
+    }
+
+    .topicTitleText {
+        font-size: 18px;
+        /* smaller for mobile */
+        padding: 6px;
+    }
+
+    .createtopicContainer {
+        height: 20vh;
+        width: 80vw;
+        padding: 2px;
+        margin-left: 2vw;
+    }
+
+    .unitFileUpload {
+        margin-top: 9px;
+        margin-left: 29px;
+    }
+
+    .clearImage {
+        margin-left: 2vw;
+    }
+}
