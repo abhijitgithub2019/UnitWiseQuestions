@@ -269,7 +269,7 @@ const AddUnitTopics = () => {
 
         <div className="populateContainer">
           <label htmlFor="my-input-u pload" className="uploadQuestionTitle">
-            Step 2: Upload Your Question(BPT)
+            Step 2: Upload Your Questions(BPT)
           </label>
           <input
             type="file"
