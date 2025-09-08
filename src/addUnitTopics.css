@@ -233,6 +233,18 @@
     text-align: left;
 }
 
+.footer {
+    background-color: #333;   /* dark background */
+    color: #fff;              /* white text */
+    text-align: center;       /* center align text */
+    padding: 15px 10px;       /* spacing */
+    font-size: 14px;          /* smaller font */
+    position: fixed;          /* stick to bottom */
+    bottom: 0;
+    right: 1px;
+    width: 100%;
+  }
+
 /* @media (max-width: 1024px) {
     .heading {
       font-size: 2rem;
