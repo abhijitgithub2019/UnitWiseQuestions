@@ -105,25 +105,33 @@ const AddUnitTopics = () => {
   };
 
   const fileUpload = async (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
+    const files = Array.from(event.target.files);
+    // const file = event.target.files[0];
+    if (!files.length) return;
     setLoadingQuestion(true);
+    const res = [];
 
     try {
-      const {
-        data: { text },
-      } = await Tesseract.recognize(file, "eng", {
-        // logger: (m) => console.log(m), // progress updates
-      });
-      const regix =
-        /(LONG ESSAYS \(Answer any One\) 1 x 10 = 10 Marks|SHORT ESSAYS \(Answer any Eight\) 8 x 5 = 40 Marks|SHORT ANSWERS 10 x 3 = 30 Marks|- ° =|>|<|\)|\(|&|=|S T)/g;
-      let newStr = text.replace(regix, "").replace(/\s+/g, " ");
-      newStr = reFactorQuestions(newStr);
-      if (!newStr.length) {
+      for (const file of files) {
+        const {
+          data: { text },
+        } = await Tesseract.recognize(file, "eng", {
+          // logger: (m) => console.log(m), // progress updates
+        });
+        const regix =
+          /(LONG ESSAYS \(Answer any One\) 1 x 10 = 10 Marks|SHORT ESSAYS \(Answer any Eight\) 8 x 5 = 40 Marks|SHORT ANSWERS 10 x 3 = 30 Marks|- ° =|>|<|\)|\(|&|=|S T|i 2)/g;
+        let newStr = text.replace(regix, "").replace(/\s+/g, " ");
+        newStr = reFactorQuestions(newStr);
+        if (newStr.length) {
+          res.push(...newStr);
+        }
+      }
+
+      if (!res.length) {
         setOverlay({ id: "unittopics", visible: true });
         return;
       }
-      setText(newStr);
+      setText(res);
     } catch (err) {
       setText("Error reading image.", err);
     } finally {
@@ -183,10 +191,7 @@ const AddUnitTopics = () => {
   if (listOfTopics.length) {
     list = listOfTopics.map((l, i) => {
       return (
-        <div
-           className="topicList"
-          key={`list_${i}`}
-        >
+        <div className="topicList" key={`list_${i}`}>
           {l}
         </div>
       );
@@ -272,6 +277,7 @@ const AddUnitTopics = () => {
             accept="image/*"
             onChange={fileUpload}
             className="uploadQuestion"
+            multiple
           ></input>
           <button
             type="submit"
