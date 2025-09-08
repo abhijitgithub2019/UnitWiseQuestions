@@ -221,7 +221,7 @@ const AddUnitTopics = () => {
         >
           (Identifies which questions are part of a specific unit)
         </p>
-        <a href="mailto:someone@example.com" className="feedback-btn">Send feedback</a>
+        <a href="mailto:rintu.patra224@gmail.com" className="feedback-btn">Send feedback</a>
         {/* <button
           class="feedback-btn"
           onclick="window.location.href='mailto:rintu.patra224@email.com?subject=Feedback&body=Hi,'"
