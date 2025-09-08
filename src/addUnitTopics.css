@@ -245,6 +245,22 @@
     width: 100%;
   }
 
+  .feedback-btn {
+    position: relative;
+    bottom: 12vh;
+    left: 23vw;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+    text-decoration: none;
+  }
+
 /* @media (max-width: 1024px) {
     .heading {
       font-size: 2rem;
@@ -341,5 +357,10 @@
 
     .uploadQuestionTitle {
         font-size: 17px;
+    }
+
+    .feedback-btn {
+        bottom: 22vh;
+        left: 26vw;
     }
 }

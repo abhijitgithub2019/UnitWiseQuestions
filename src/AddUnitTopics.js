@@ -212,7 +212,22 @@ const AddUnitTopics = () => {
     <div className="container">
       <div className="topicContainer">
         <h1 className="heading">Unit Wise Questions Generator</h1>
-        <p style={{fontSize: "18px", fontWeight: "bold", color: "cornflowerblue"}}> (Identifies which questions are part of a specific unit)</p>
+        <p
+          style={{
+            fontSize: "18px",
+            fontWeight: "bold",
+            color: "cornflowerblue",
+          }}
+        >
+          (Identifies which questions are part of a specific unit)
+        </p>
+        <a href="mailto:someone@example.com" className="feedback-btn">Send feedback</a>
+        {/* <button
+          class="feedback-btn"
+          onclick="window.location.href='mailto:rintu.patra224@email.com?subject=Feedback&body=Hi,'"
+        >
+          Send Feedback
+        </button> */}
         <div className="createtopicContainer">
           <div className="topicButtonText">
             <label htmlFor="my-input" className="topicTitleText">
@@ -317,9 +332,7 @@ const AddUnitTopics = () => {
           </div>
         )}
       </div>
-      <div className="footer">
-        © 2025 AbhiLayMan. All rights reserved.
-      </div>
+      <div className="footer">© 2025 AbhiLayMan. All rights reserved.</div>
     </div>
   );
 };
